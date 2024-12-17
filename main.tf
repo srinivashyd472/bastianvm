@@ -112,14 +112,14 @@ resource "azurerm_linux_virtual_machine" "example" {
     public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDG6oYC/SKicE+RhSs5wsctCrze7C0aPWpg7p9N78+QFUpkhLqQIJZpzvAT2E2TrcQA6maiZQBRM+lQ/7+2/VksWgFAPt1g4HAtLtBdRLPmx0i2JoDg9aytY2nGXD33PkXG3ocbqPxQQpP1u9elZmT7hyWyw9WUD02ftixKtJ2Kb099kAWdnttzShDMsNb3BOUjc/CSFHar+57/0O7+7BRFfTHiJAkSiD4w7FUFyT27igS8B/fiyLfGRzUp3uqxDhkuO5kKM0LrB9g59NU0LBAIK7ZgPUVIkHIN882979ED/K7b9cJEKHwCPUh09WeRluQcY5wPQntBp/pGmpGbxhtV rsa-key-20241214"
   } 
 }
-resource "azurerm_bastion_host" "bhost" {
-  name                = "bastianhost"
-  location            = azurerm_resource_group.srg.location
-  resource_group_name = azurerm_resource_group.srg.name
+# resource "azurerm_bastion_host" "bhost" {
+#   name                = "bastianhost"
+#   location            = azurerm_resource_group.srg.location
+#   resource_group_name = azurerm_resource_group.srg.name
 
-  ip_configuration {
-    name                 = "configuration"
-    subnet_id            = azurerm_subnet.bastian.id
-    public_ip_address_id = azurerm_public_ip.pubip[1].id
-  }
-}
+#   ip_configuration {
+#     name                 = "configuration"
+#     subnet_id            = azurerm_subnet.bastian.id
+#     public_ip_address_id = azurerm_public_ip.pubip[1].id
+#   }
+# }
