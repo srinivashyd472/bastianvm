@@ -17,7 +17,6 @@ resource "azurerm_subnet" "sub" {
     virtual_network_name = azurerm_virtual_network.vnet.name
     address_prefixes = var.subaddress
 }
-#subnet config1
 
 #Bastian subnet config
 resource "azurerm_subnet" "bastian" {
